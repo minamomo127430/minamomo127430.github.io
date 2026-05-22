@@ -2,269 +2,308 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <!-- 确保在移动端完美显示，并阻止 iOS 自动放大输入框 (font-size >= 16px) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>手机中文打字练习</title>
+    <meta0fdf4;
+            border-color: var(--correct);
+            color: var(--correct);
+        }
+        .refresh-btn name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+     {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary);
+            color: white;
+            <title>中文打字练习</title>
     <style>
         :root {
-            --bg-color: #f5f7fa;
-            --card-bg: #ffffff;
-            --text-main: #333333;
-            --text-correct: #4caf50; /* 绿色 */
-            --text-error: #f44336;   /* 红色 */
-            --text-untyped: #9e9e9e; /* 灰色 */
-            --border-color: #e0e0e0;
-            --primary-color: #2196f3;
+            --bg: #f0f2f5border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor;
+            --card: #ffffff;
+            --main: #333;
+            --ok: #2ecc71;
+            --err:: pointer;
+            margin-bottom: 30px;
+        }
+        .refresh-btn:active {
+            opacity: 0 #e74c3c;
+            --null: #95a5a6;
+            --primary: #3498db.8;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--untyped;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            margin: 0;
-            padding: 16px;
-            line-height: 1.6;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 24px;
-        }
-
-        h1 {
-            font-size: 24px;
-            margin: 0 0 8px 0;
-        }
-
-        .article-title {
-            font-size: 18px;
-            font-weight: bold;
-            color: var(--primary-color);
-            margin-bottom: 4px;
-        }
-
-        .article-author {
-            font-size: 14px;
-            color: var(--text-untyped);
-            margin-bottom: 20px;
-        }
-
-        .paragraph-card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            padding: 16px;
-            margin-bottom: 16px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        .text-display {
-            font-size: 18px;
-            margin-bottom: 12px;
-            word-wrap: break-word;
-            letter-spacing: 1px;
-            color: var(--text-main);
-            transition: all 0.3s ease;
-        }
-
-        /* 状态样式 */
-        .char-correct { color: var(--text-correct); }
-        .char-error { 
-            color: var(--text-error); 
-            background-color: #ffebee;
-            border-radius: 2px;
-        }
-        .char-untyped { color: var(--text-main); }
-
-        /* 段落全对时的特效 */
-        .text-display.all-correct {
-            font-weight: bold;
-            transform: scale(1.02);
-        }
-
-        .text-input {
-            width: 100%;
-            height: 80px;
-            box-sizing: border-box;
-            font-size: 16px; /* 必须 >=16px，防止 iOS 点击时自动放大页面 */
-            padding: 12px;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            resize: none;
-            font-family: inherit;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-
-        .text-input:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
-        }
-
-        .text-input:disabled {
-            background-color: #f9f9f9;
-            color: var(--text-correct);
-        }
-
-        .btn-refresh {
-            display: block;
-            width: 100%;
-            padding: 14px;
-            font-size: 16px;
-            color: #fff;
-            background-color: var(--primary-color);
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-top: 24px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 6px rgba(33, 150, 243, 0.2);
-        }
-
-        .btn-refresh:active {
-            background-color: #1976d2;
-            transform: translateY(2px);
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color:);
         }
     </style>
 </head>
 <body>
 
+<div id="app">
     <div class="header">
-        <h1>手机打字练习</h1>
-    </div>
+        <h2> var(--bg);
+            color: var(--main);
+            margin: 0;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    <div id="article-info">
-        <!-- 标题和作者将由 JS 动态插入 -->
+        .container {
+            width: 100%;
+            max-width打字练习</h2>
+        <p id="status-text">随机抓取文学段落</p>
     </div>
+    <div id="content-container"></div>: 600px;
+        }
 
-    <div id="content-container">
-        <!-- 段落卡片将由 JS 动态插入 -->
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    <button class="refresh-btn" id="refresh-btn" onclick="fetchNewArticle()">换一批内容</button>
+</div>
+
+<script>
+    
+
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 20px;
+            marginconst container = document.getElementById('content-container');
+    const statusText = document.getElementById('status-text');
+    const refreshBtn = document.getElementById('-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.0refresh-btn');
+
+    async function fetchNewArticle() {
+        refreshBtn.disabled = true;
+        container.innerHTML = '<div class="loading">5);
+        }
+
+        .text-box {
+            font-size: 19px;
+            line-height: 1.正在加载网络文本...</div>';
+        
+        try {
+            const lines = [];
+            for (let i = 0; i < 3;6;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            word-break: break-all;
+        }
+
+        .char-ok { color: var(--ok); }
+        .char-err { color: var(--err); background: #f i++) {
+                const res = await fetch('https://v1.hitokoto.cn/?c=d&c=i');
+                const data = await res.json();
+                lines.push(data.hitokoto);
+            }
+            renderArticle(lines);
+        } catch (edeaea; }
+        .char-null { color: var(--main); }
+
+        .input-area {
+            width: 100%;
+            height: 100px;
+            font-size: 16px;
+            padding: 12px;
+) {
+            container.innerHTML = '<div class="loading" style="color:red">加载失败，请重试</div>';
+        } finally {
+            refreshBtn            border: 2px solid #eee;
+            border-radius: 8px;
+            outline: none;
+            box-sizing: border-box.disabled = false;
+        }
+    }
+
+    function renderArticle(lines) {
+        container.innerHTML = '';
+        lines.forEach((text, idx) => {
+            const card = document.createElement('div');
+            card.className = 'article-card';
+
+            const display = document.;
+            font-family: inherit;
+            resize: none;
+            -webkit-appearance: none;
+        }
+
+        .input-area:focus {
+            border-color: var(--primary);
+        }
+
+        .input-area:disabled {
+            background-color: #f9f9createElement('div');
+            display.className = 'text-display';
+            display.id = `d-${idx}`;
+            display.innerHTML = text.split('').map(c => `<span class="char-untyped">${c}</span>`).join('');
+
+            const input = document.createElement('textarea');
+            input.classNamef9;
+            border-color: var(--ok);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font = 'text-input';
+            input.placeholder = '点击此处开始输入...';
+            input.oninput = () => check(input, display-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+, text);
+
+            card.appendChild(display);
+            card.appendChild(input);
+            container.appendChild(card);
+        });
+    }
+
+    function        .btn:active {
+            opacity: 0.8;
+        }
+
+        .status-msg {
+            text-align: center;
+             check(el, disp, target) {
+        const val = el.value;
+        let resultHtml = '';
+        let correctCount = 0;
+
+font-size: 14px;
+            color: var(--null);
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h2>打字练习</h2>
+            <div id="info" class="status-msg">点击下方按钮获取新文章</div>
+        </div>
+
+        <div id="board"></div>
+
+        <button class="        for (let i = 0; i < target.length; i++) {
+            if (i < val.length) {
+                if (val[i] === target[i]) {
+                    resultHtml += `<span class="char-correct">${target[i]}</span>`;
+                    correctCount++;
+                } else {
+                    resultHtml += `<span class="char-error">${target[i]}</span>`;
+                }
+            } else {
+                resultHtml += `<span classbtn" id="refreshBtn" onclick="fetchContent()">换一篇随机文章</button>
     </div>
-
-    <button class="btn-refresh" onclick="loadRandomArticle()">换一篇文章</button>
 
     <script>
-        // 内置文章题库，你可以随时在这里添加更多文章
-        const articles = [
-            {
-                title: "春 (节选)",
-                author: "朱自清",
-                paragraphs: [
-                    "盼望着，盼望着，东风来了，春天的脚步近了。",
-                    "一切都像刚睡醒的样子，欣欣然张开了眼。山朗润起来了，水涨起来了，太阳的脸红起来了。",
-                    "小草偷偷地从土里钻出来，嫩嫩的，绿绿的。园子里，田野里，瞧去，一大片一大片满是的。"
-                ]
-            },
-            {
-                title: "匆匆 (节选)",
-                author: "朱自清",
-                paragraphs: [
-                    "燕子去了，有再来的时候；杨柳枯了，有再青的时候；桃花谢了，有再开的时候。",
-                    "但是，聪明的，你告诉我，我们的日子为什么一去不复返呢？",
-                    "洗手的时候，日子从水盆里过去；吃饭的时候，日子从饭碗里过去；默默时，便从凝然的双眼前过去。"
-                ]
-            },
-            {
-                title: "故都的秋 (节选)",
-                author: "郁达夫",
-                paragraphs: [
-                    "秋天，无论在什么地方的秋天，总是好的；可是啊，北国的秋，却特别地来得清，来得静，来得悲凉。",
-                    "我的不远千里，要从杭州赶上青岛，更要从青岛赶上北平来的理由，也不过想饱尝一尝这“秋”，这故都的秋味。",
-                    "江南，秋当然也是有的；但草木凋得慢，空气来得润，天的颜色显得淡。"
-                ]
+        const board = document.getElementById('board');
+        const info = document.getElementById('info');
+        const btn = document.getElementById('refreshBtn');
+
+        async function fetchContent() {
+            btn.disabled = true;
+            btn.innerText = "获取中...";
+            board.innerHTML = "";
+            info.innerText = "正在从网络调="char-untyped">${target[i]}</span>`;
             }
-        ];
-
-        let currentArticleIndex = -1;
-
-        // 加载随机文章
-        function loadRandomArticle() {
-            // 确保不和上一次重复
-            let newIndex;
-            do {
-                newIndex = Math.floor(Math.random() * articles.length);
-            } while (newIndex === currentArticleIndex && articles.length > 1);
-            
-            currentArticleIndex = newIndex;
-            const article = articles[currentArticleIndex];
-
-            // 渲染标题
-            document.getElementById('article-info').innerHTML = `
-                <div class="header">
-                    <div class="article-title">${article.title}</div>
-                    <div class="article-author">${article.author}</div>
-                </div>
-            `;
-
-            // 渲染段落
-            const container = document.getElementById('content-container');
-            container.innerHTML = ''; // 清空之前的内容
-
-            article.paragraphs.forEach((text, index) => {
-                const card = document.createElement('div');
-                card.className = 'paragraph-card';
-
-                const displayDiv = document.createElement('div');
-                displayDiv.className = 'text-display';
-                displayDiv.id = `display-${index}`;
-                // 初始状态，所有字都是原色
-                displayDiv.innerHTML = text.split('').map(char => `<span class="char-untyped">${char}</span>`).join('');
-
-                const inputBox = document.createElement('textarea');
-                inputBox.className = 'text-input';
-                inputBox.placeholder = "点击此处开始输入上方文字...";
-                
-                // 监听输入事件
-                inputBox.addEventListener('input', function() {
-                    checkTyping(this, displayDiv, text);
-                });
-
-                card.appendChild(displayDiv);
-                card.appendChild(inputBox);
-                container.appendChild(card);
-            });
         }
 
-        // 检查打字准确性并更新颜色
-        function checkTyping(inputBox, displayDiv, targetText) {
-            const inputText = inputBox.value;
-            let html = '';
-            let isAllCorrect = true;
+        disp.innerHTML = resultHtml;
 
-            for (let i = 0; i < targetText.length; i++) {
-                if (i < inputText.length) {
-                    // 用户已经输入到这个位置
-                    if (inputText[i] === targetText[i]) {
-                        html += `<span class="char-correct">${targetText[i]}</span>`;
-                    } else {
-                        html += `<span class="char-error">${targetText[i]}</span>`;
-                        isAllCorrect = false;
-                    }
-                } else {
-                    // 用户还没输入到这个位置
-                    html += `<span class="char-untyped">${targetText[i]}</span>`;
-                    isAllCorrect = false;
+        if (correctCount === target.length && val.length === target.length) {
+            el.disabled = true;
+            el.value = val + ' ✓';
+        }
+    }
+
+    window.onload = fetchNewArticle;
+</script>
+
+</body>
+</html>取数据...";
+
+            try {
+                const contents = [];
+                for(let i = 0; i < 2; i++) {
+                    const res = await fetch('https://v1.hitokoto.cn/?c=d&c=h&c=i');
+                    const data = await res.json();
+                    contents.push(data.hitokoto);
                 }
-            }
-
-            // 如果用户输入的长度超过了目标文本，超出部分不算全对
-            if (inputText.length > targetText.length) {
-                isAllCorrect = false;
-            }
-
-            displayDiv.innerHTML = html;
-
-            // 如果整段完全正确
-            if (isAllCorrect) {
-                displayDiv.classList.add('all-correct');
-                inputBox.disabled = true; // 锁定输入框
-                inputBox.value = inputText + " ✓"; // 提示完成
-            } else {
-                displayDiv.classList.remove('all-correct');
+                
+                info.innerText = "来自网络随机摘录";
+                contents.forEach((text, idx) => createCard(text, idx));
+            } catch (e) {
+                info.innerText = "获取失败，请重试";
+            } finally {
+                btn.disabled = false;
+                btn.innerText = "换一篇随机文章";
             }
         }
 
-        // 页面加载时自动显示第一篇随机文章
-        window.onload = loadRandomArticle;
+        function createCard(text, idx) {
+            const div = document.createElement('div');
+            div.className = 'card';
+
+            const display = document.createElement('div');
+            display.className = 'text-box';
+            display.id = `display-${idx}`;
+            display.innerHTML = text.split('').map(c => `<span class="char-null">${c}</span>`).join('');
+
+            const input = document.createElement('textarea');
+            input.className = 'input-area';
+            input.placeholder = "开始输入...";
+            input.oninput = () => {
+                const val = input.value;
+                let correct = true;
+                let html = "";
+
+                for(let i = 0; i < text.length; i++) {
+                    if(i < val.length) {
+                        if(val[i] === text[i]) {
+                            html += `<span class="char-ok">${text[i]}</span>`;
+                        } else {
+                            html += `<span class="char-err">${text[i]}</span>`;
+                            correct = false;
+                        }
+                    } else {
+                        html += `<span class="char-null">${text[i]}</span>`;
+                        correct = false;
+                    }
+                }
+
+                display.innerHTML = html;
+
+                if(correct && val.length === text.length) {
+                    input.disabled = true;
+                    input.value += " ✓";
+                }
+            };
+
+            div.appendChild(display);
+            div.appendChild(input);
+            board.appendChild(div);
+        }
+
+        window.onload = fetchContent;
     </script>
 </body>
 </html>
