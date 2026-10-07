@@ -55,12 +55,9 @@ nav a:hover{
 }
 
 /* Main */
-main,footer{
+main{
   width:60%;
   margin:auto;
-}
-
-main{
   padding-top:65px;
 }
 
@@ -119,9 +116,16 @@ h2{
 
 /* Footer */
 footer{
-  padding:70px 0 45px;
+  width:100%;
+  margin-top:0;
   border-top:1px solid #eee;
   text-align:center;
+}
+
+.footer-contact{
+  width:60%;
+  margin:auto;
+  padding:50px 0 42px;
 }
 
 .email-icon{
@@ -142,11 +146,21 @@ footer{
   display:block;
 }
 
-.copy{
-  margin:20px 0 0;
+.footer-meta{
+  border-top:1px solid #eee;
+  padding:28px 0 35px;
+}
+
+.footer-meta p{
+  max-width:none;
+  margin:0;
   color:#777;
   font-size:14px;
   text-align:center;
+}
+
+.last-updated{
+  margin-top:6px !important;
 }
 
 /* Mobile */
@@ -154,7 +168,7 @@ footer{
 
   .nav-inner,
   main,
-  footer{
+  .footer-contact{
     width:calc(100% - 40px);
   }
 
@@ -236,7 +250,7 @@ footer{
     <p>
       My name is Zhihao Hu, and I am an undergraduate student majoring in Mathematics at Shanghai Jiao Tong University.
       I am interested in mathematics, especially algebraic geometry and number theory, artificial intelligence, and related areas of research.
-      I am currently a Research Assistant at DeepDelta Lab.
+      I am currently a Research Assistant Intern at DeepDelta Lab.
     </p>
 
     <p>
@@ -297,42 +311,54 @@ footer{
 </main>
 
 
-<!-- Email / Footer -->
+<!-- Footer -->
 <footer>
 
-  <a
-    class="email-icon"
-    href="mailto:minamomo@sjtu.edu.cn"
-    aria-label="Email"
-    title="Email"
-  >
-    <svg
-      viewBox="0 0 80 60"
-      xmlns="http://www.w3.org/2000/svg"
+  <div class="footer-contact">
+
+    <a
+      class="email-icon"
+      href="mailto:minamomo@sjtu.edu.cn"
+      aria-label="Email"
+      title="Email"
     >
-      <rect
-        x="1"
-        y="1"
-        width="78"
-        height="58"
-        rx="7"
-        fill="#000000"
-      />
+      <svg
+        viewBox="0 0 80 60"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="1"
+          y="1"
+          width="78"
+          height="58"
+          rx="7"
+          fill="#000000"
+        />
 
-      <path
-        d="M4 6 L40 35 L76 6"
-        fill="none"
-        stroke="#ffffff"
-        stroke-width="6"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-  </a>
+        <path
+          d="M4 6 L40 35 L76 6"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
 
-  <p class="copy">
-    © 2026 Zhihao Hu
-  </p>
+  </div>
+
+  <div class="footer-meta">
+
+    <p>
+      © 2026 Zhihao Hu
+    </p>
+
+    <p class="last-updated">
+      Last Updated: October 7, 2026
+    </p>
+
+  </div>
 
 </footer>
 
