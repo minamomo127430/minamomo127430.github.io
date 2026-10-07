@@ -1,462 +1,203 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zhihao Hu</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font:18px/1.55 Arial,Helvetica,sans-serif;
+  color:#111;
+  background:#fff;
+}
+a{color:inherit}
+
+nav{
+  height:65px;
+  border-bottom:1px solid #eee;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:28px;
+  width:66.67%;
+  margin:auto;
+}
+nav a{
+  font-size:20px;
+  text-decoration:none;
+}
+nav a:first-child{color:#6c8ba3}
+nav a:hover{color:#6c8ba3}
+
+main,footer{
+  width:66.67%;
+  margin:auto;
+}
+
+.intro{
+  padding:62px 0 80px;
+  min-height:570px;
+}
+
+h1{
+  margin:0;
+  font-size:48px;
+  font-weight:300;
+  line-height:1.15;
+  letter-spacing:-1.5px;
+}
+h1 strong{font-weight:700}
+
+.affiliation{
+  margin:8px 0 27px;
+  color:#547b99;
+  font-size:19px;
+}
+.affiliation a{text-decoration:none}
+
+p{max-width:760px;margin:0 0 22px}
+
+section{
+  border-top:1px solid #eee;
+  padding:75px 0;
+}
+h2{
+  margin:0 0 22px;
+  font-size:38px;
+  font-weight:600;
+}
+.link{
+  font-size:20px;
+  text-decoration:none;
+}
+.link:hover{color:#547b99}
+
+footer{
+  border-top:1px solid #eee;
+  padding:70px 0 45px;
+  text-align:center;
+}
+.email a{
+  text-decoration:none;
+  border-bottom:1px solid #111;
+}
+.email a:hover{color:#547b99;border-color:#547b99}
+.copy{color:#777;font-size:14px}
+
+@media(max-width:850px){
+  nav,main,footer{width:calc(100% - 40px)}
+  nav{height:auto;padding:18px 0;justify-content:center;flex-wrap:wrap;gap:12px 20px}
+  nav a{font-size:16px}
+  .intro{padding-top:50px}
+  h1{font-size:40px}
+}
+</style>
+</head>
+
 <body>
 
-  <!-- Navigation -->
-  <header class="top-nav">
-    <nav>
-      <a href="#about">关于 / About</a>
-      <a href="#cv">CV</a>
-      <a href="#research">研究 / Research</a>
-      <a href="#notes">数学 / Mathematics</a>
-      <a href="#contact">联系 / Contact</a>
-    </nav>
-  </header>
-
-
-  <main class="page-container">
-
-    <!-- Main introduction -->
-    <section id="about" class="intro-section">
-
-      <div class="intro-left">
-
-        <h1>
-          <strong>Zhihao</strong> Hu
-        </h1>
-
-        <p class="affiliation">
-          DeepDelta Lab
-        </p>
-
-        <p class="welcome">
-          Hi, welcome to my homepage!
-        </p>
-
-        <p>
-          My name is Momo Minamomo. I am interested in mathematics,
-          artificial intelligence, and related areas of research.
-        </p>
-
-        <p>
-          My mathematical notes and resources are mainly written in
-          Simplified Chinese. I am also currently working with
-          <a
-            href="https://deepdeltalab.github.io/zh/"
-            target="_blank"
-            rel="noopener"
-          >
-            DeepDelta Lab
-          </a>.
-        </p>
-
-        <p>
-          This website collects my personal information, research interests,
-          and academic resources. More details will be added gradually.
-        </p>
-
-      </div>
-
-
-      <!-- Reserved space for future photo -->
-      <div class="photo-placeholder">
-        <!-- Photo will be added later -->
-      </div>
-
-    </section>
-
-
-    <!-- CV -->
-    <section id="cv" class="cv-section">
-
-      <div class="cv-title">
-        <a href="#" class="cv-link">CV</a>
-
-        <a href="mailto:your-email@example.com" class="mail-icon">
-          <span></span>
-        </a>
-      </div>
-
-      <p>
-        Please feel free to contact me through e-mail!
-      </p>
-
-    </section>
-
-
-    <!-- Research -->
-    <section id="research" class="content-section">
-
-      <h2>Research</h2>
-
-      <p>
-        My current interests include mathematics, artificial intelligence,
-        and research related to intelligent systems.
-      </p>
-
-      <p>
-        <a
-          href="https://deepdeltalab.github.io/zh/"
-          target="_blank"
-          rel="noopener"
-        >
-          DeepDelta Lab →
-        </a>
-      </p>
-
-    </section>
-
-
-    <!-- Mathematics -->
-    <section id="notes" class="content-section">
-
-      <h2>Mathematics</h2>
-
-      <p>
-        My mathematical notes and resources are maintained on my
-        Simplified Chinese mathematics homepage.
-      </p>
-
-      <p>
-        <a
-          href="https://minamomo127430.github.io/SimplifiedChinese/"
-          target="_blank"
-          rel="noopener"
-        >
-          Mathematics / 数学 →
-        </a>
-      </p>
-
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contact" class="content-section">
-
-      <h2>Contact</h2>
-
-      <p>
-        Please feel free to contact me through e-mail.
-      </p>
-
-      <p>
-        <a href="mailto:your-email@example.com">
-          your-email@example.com
-        </a>
-      </p>
-
-    </section>
-
-  </main>
-
-
-  <footer>
-    © <span id="year"></span> Momo Minamomo
-  </footer>
-
-
-  <style>
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      background: #ffffff;
-      color: #111111;
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-      font-size: 18px;
-      line-height: 1.55;
-    }
-
-
-    /* -----------------------------
-       Navigation
-    ----------------------------- */
-
-    .top-nav {
-      width: 100%;
-      height: 65px;
-      border-bottom: 1px solid #eeeeee;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .top-nav nav {
-      width: 1060px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .top-nav a {
-      text-decoration: none;
-      color: #111111;
-      font-size: 20px;
-      transition: color 0.2s ease;
-    }
-
-    .top-nav a:first-child {
-      color: #6c8ba3;
-    }
-
-    .top-nav a:hover {
-      color: #6c8ba3;
-    }
-
-
-    /* -----------------------------
-       Main container
-    ----------------------------- */
-
-    .page-container {
-      width: 1060px;
-      max-width: calc(100% - 48px);
-      margin: 0 auto;
-    }
-
-
-    /* -----------------------------
-       Introduction
-    ----------------------------- */
-
-    .intro-section {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 320px;
-      column-gap: 56px;
-
-      padding-top: 62px;
-      min-height: 575px;
-    }
-
-    .intro-left h1 {
-      margin: 0 0 2px 0;
-
-      font-size: 48px;
-      font-weight: 300;
-      line-height: 1.15;
-      letter-spacing: -1.5px;
-    }
-
-    .intro-left h1 strong {
-      font-weight: 700;
-    }
-
-    .affiliation {
-      margin: 8px 0 27px 0;
-
-      color: #547b99;
-      font-size: 19px;
-    }
-
-    .welcome {
-      margin-top: 0;
-      margin-bottom: 20px;
-
-      font-size: 19px;
-    }
-
-    .intro-left p {
-      max-width: 700px;
-      margin-bottom: 22px;
-    }
-
-    .intro-left a,
-    .content-section a,
-    .cv-section a {
-      color: inherit;
-    }
-
-    .intro-left a:hover,
-    .content-section a:hover {
-      color: #547b99;
-    }
-
-
-    /* -----------------------------
-       Future photo area
-    ----------------------------- */
-
-    .photo-placeholder {
-      width: 320px;
-      height: 420px;
-      margin-top: 100px;
-    }
-
-
-    /* -----------------------------
-       CV
-    ----------------------------- */
-
-    .cv-section {
-      text-align: center;
-      padding: 50px 0 75px 0;
-    }
-
-    .cv-title {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 26px;
-    }
-
-    .cv-link {
-      color: #000000;
-      text-decoration: none;
-
-      font-size: 62px;
-      font-weight: 700;
-      line-height: 1;
-    }
-
-    .cv-link:hover {
-      color: #547b99;
-    }
-
-
-    /* Simple mail icon */
-    .mail-icon {
-      position: relative;
-
-      display: inline-block;
-      width: 76px;
-      height: 54px;
-
-      background: #000000;
-      border-radius: 7px;
-      overflow: hidden;
-    }
-
-    .mail-icon::before,
-    .mail-icon::after {
-      content: "";
-      position: absolute;
-
-      width: 47px;
-      height: 47px;
-
-      border-bottom: 7px solid #ffffff;
-      border-right: 7px solid #ffffff;
-
-      top: -21px;
-    }
-
-    .mail-icon::before {
-      left: 3px;
-      transform: rotate(45deg);
-    }
-
-    .mail-icon::after {
-      right: 3px;
-      transform: rotate(-45deg);
-    }
-
-    .cv-section p {
-      margin-top: 28px;
-      font-size: 17px;
-    }
-
-
-    /* -----------------------------
-       Lower sections
-    ----------------------------- */
-
-    .content-section {
-      border-top: 1px solid #eeeeee;
-      padding: 70px 0;
-    }
-
-    .content-section h2 {
-      margin: 0 0 20px 0;
-
-      font-size: 34px;
-      font-weight: 600;
-    }
-
-    .content-section p {
-      max-width: 760px;
-      margin: 12px 0;
-    }
-
-
-    /* -----------------------------
-       Footer
-    ----------------------------- */
-
-    footer {
-      width: 1060px;
-      max-width: calc(100% - 48px);
-
-      margin: 0 auto;
-      padding: 35px 0 45px;
-
-      border-top: 1px solid #eeeeee;
-
-      color: #777777;
-      font-size: 14px;
-      text-align: center;
-    }
-
-
-    /* -----------------------------
-       Responsive
-    ----------------------------- */
-
-    @media (max-width: 850px) {
-
-      .top-nav {
-        height: auto;
-        padding: 18px 0;
-      }
-
-      .top-nav nav {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px 20px;
-      }
-
-      .top-nav a {
-        font-size: 16px;
-      }
-
-      .intro-section {
-        grid-template-columns: 1fr;
-        min-height: auto;
-      }
-
-      .photo-placeholder {
-        display: none;
-      }
-
-      .intro-left h1 {
-        font-size: 40px;
-      }
-
-      .cv-section {
-        padding-top: 60px;
-      }
-
-      .content-section {
-        padding: 50px 0;
-      }
-    }
-
-  </style>
-
-
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+<nav>
+  <a href="#about">关于 / About</a>
+  <a href="#notes">数学 / Mathematics</a>
+  <a href="#research">研究 / Research</a>
+  <a href="#contact">联系 / Contact</a>
+</nav>
+
+<main>
+
+<section id="about" class="intro">
+  <h1><strong>Zhihao</strong> Hu</h1>
+
+  <p class="affiliation">
+    <a href="https://math.sjtu.edu.cn/Default/index/" target="_blank">
+      School of Mathematical Science, Shanghai Jiao Tong University
+    </a>
+  </p>
+
+  <p>Hi, welcome to my homepage!</p>
+
+  <p>
+    My name is Zhihao Hu. I am interested in mathematics,
+    artificial intelligence, and related areas of research.
+  </p>
+
+  <p>
+    My mathematical notes and resources are mainly written in Simplified Chinese.
+  </p>
+
+  <p>
+    This website collects my personal information,
+    research interests, and academic resources.
+    More details will be added gradually.
+  </p>
+</section>
+
+
+<section id="notes">
+  <h2>Mathematics</h2>
+
+  <p>
+    My mathematical notes and resources are maintained on my
+    Simplified Chinese mathematics homepage.
+  </p>
+
+  <a
+    class="link"
+    href="https://minamomo127430.github.io/SimplifiedChinese/"
+    target="_blank"
+  >
+    Mathematics Homepage →
+  </a>
+</section>
+
+
+<section id="research">
+  <h2>Research</h2>
+
+  <p>
+    My current interests include mathematics,
+    artificial intelligence, and research related to intelligent systems.
+  </p>
+
+  <p>
+    I am affiliated with
+    <a href="https://deepdeltalab.github.io/zh/" target="_blank">
+      DeepDelta Lab
+    </a>.
+  </p>
+
+  <a
+    class="link"
+    href="https://deepdeltalab.github.io/zh/"
+    target="_blank"
+  >
+    Visit DeepDelta Lab →
+  </a>
+</section>
+
+</main>
+
+<footer id="contact">
+  <p class="email">
+    <a href="mailto:minamomo@sjtu.edu.cn">
+      Email: minamomo@sjtu.edu.cn
+    </a>
+  </p>
+
+  <p class="copy">
+    © <span id="year"></span> Zhihao Hu
+  </p>
+</footer>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
 
 </body>
+</html>
+```
