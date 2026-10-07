@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zhihao Hu</title>
 
 <style>
@@ -20,15 +19,26 @@ body{
 
 a{color:inherit}
 
+/* Navigation */
 nav{
-  width:60%;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
   height:65px;
+  background:#fff;
+  border-bottom:1px solid #eee;
+}
+
+.nav-inner{
+  width:60%;
+  height:100%;
   margin:auto;
   display:flex;
   justify-content:flex-end;
   align-items:center;
   gap:28px;
-  border-bottom:1px solid #eee;
 }
 
 nav a{
@@ -36,17 +46,27 @@ nav a{
   text-decoration:none;
 }
 
-nav a:first-child{color:#6c8ba3}
-nav a:hover{color:#6c8ba3}
+nav a:first-child{
+  color:#6c8ba3;
+}
 
+nav a:hover{
+  color:#6c8ba3;
+}
+
+/* Main */
 main,footer{
   width:60%;
   margin:auto;
 }
 
+main{
+  padding-top:65px;
+}
+
+/* About */
 .intro{
-  padding:62px 0 80px;
-  min-height:570px;
+  padding:45px 0 40px;
 }
 
 h1{
@@ -57,10 +77,12 @@ h1{
   letter-spacing:-1.5px;
 }
 
-h1 strong{font-weight:700}
+h1 strong{
+  font-weight:700;
+}
 
 .affiliation{
-  margin:8px 0 27px;
+  margin:8px 0 24px;
   font-size:19px;
 }
 
@@ -71,42 +93,42 @@ h1 strong{font-weight:700}
 
 p{
   max-width:760px;
-  margin:0 0 22px;
+  margin:0 0 18px;
 }
 
-section{
-  padding:75px 0;
+/* Sections */
+section:not(.intro){
+  padding:40px 0;
   border-top:1px solid #eee;
 }
 
 h2{
-  margin:0 0 22px;
-  font-size:38px;
+  margin:0 0 18px;
+  font-size:36px;
   font-weight:600;
 }
 
 .link{
-  font-size:20px;
+  font-size:19px;
   text-decoration:none;
 }
 
-.link:hover{color:#547b99}
+.link:hover{
+  color:#547b99;
+}
 
+/* Footer */
 footer{
-  padding:70px 0 45px;
+  padding:40px 0 35px;
   border-top:1px solid #eee;
   text-align:center;
 }
 
 /* Email icon */
 .email-icon{
-  display:inline-flex;
-  width:68px;
-  height:48px;
-  align-items:center;
-  justify-content:center;
-  background:#000;
-  border-radius:6px;
+  display:inline-block;
+  width:56px;
+  height:42px;
   text-decoration:none;
   transition:opacity .2s ease;
 }
@@ -116,169 +138,187 @@ footer{
 }
 
 .email-icon svg{
-  width:54px;
-  height:38px;
+  width:100%;
+  height:100%;
+  display:block;
 }
 
 .copy{
-  margin-top:28px;
+  margin-top:18px;
   color:#777;
   font-size:14px;
 }
 
+/* Mobile */
 @media(max-width:850px){
-  nav,main,footer{
+
+  .nav-inner,
+  main,
+  footer{
     width:calc(100% - 40px);
   }
 
-  nav{
-    height:auto;
-    padding:18px 0;
+  .nav-inner{
     justify-content:center;
     flex-wrap:wrap;
     gap:12px 20px;
   }
 
-  nav a{font-size:16px}
-
-  .intro{
-    padding-top:50px;
+  nav{
+    height:auto;
   }
 
-  h1{font-size:40px}
+  nav a{
+    font-size:16px;
+  }
+
+  main{
+    padding-top:105px;
+  }
+
+  h1{
+    font-size:40px;
+  }
 }
 </style>
-
 </head>
 
 <body>
 
 <nav>
-  <a href="#about">关于 / About</a>
-  <a href="#notes">数学 / Mathematics</a>
-  <a href="#research">研究 / Research</a>
-  <a href="#contact">联系 / Contact</a>
+  <div class="nav-inner">
+    <a href="#about">关于 / About</a>
+    <a href="#notes">数学 / Mathematics</a>
+    <a href="#research">研究 / Research</a>
+    <a href="#contact">联系 / Contact</a>
+  </div>
 </nav>
 
 <main>
 
-<section id="about" class="intro">
-  <h1><strong>Zhihao</strong> Hu</h1>
+  <!-- About -->
+  <section id="about" class="intro">
 
-  <p class="affiliation">
-    <a href="https://math.sjtu.edu.cn/Default/index/" target="_blank" rel="noopener">
-      Shanghai Jiao Tong University
+    <h1><strong>Zhihao</strong> Hu</h1>
+
+    <p class="affiliation">
+      <a
+        href="https://math.sjtu.edu.cn/Default/index/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        School of Mathematical Science, Shanghai Jiao Tong University
+      </a>
+    </p>
+
+    <p>Hi, welcome to my homepage!</p>
+
+    <p>
+      My name is Zhihao Hu. I am interested in mathematics,
+      artificial intelligence, and related areas of research.
+    </p>
+
+    <p>
+      My mathematical notes and resources are mainly written in Simplified Chinese.
+    </p>
+
+    <p>
+      This website collects my personal information,
+      research interests, and academic resources.
+      More details will be added gradually.
+    </p>
+
+  </section>
+
+
+  <!-- Mathematics -->
+  <section id="notes">
+
+    <h2>Mathematics</h2>
+
+    <p>
+      My mathematical notes and resources are maintained on my
+      Simplified Chinese mathematics homepage.
+    </p>
+
+    <a
+      class="link"
+      href="https://minamomo127430.github.io/SimplifiedChinese/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Mathematics Homepage →
     </a>
-  </p>
 
-  <p>Hi, welcome to my homepage!</p>
+  </section>
 
-  <p>
-    My name is Zhihao Hu. I am interested in mathematics,
-    artificial intelligence, and related areas of research.
-  </p>
 
-  <p>
-    My mathematical notes and resources are mainly written in Simplified Chinese.
-  </p>
+  <!-- Research -->
+  <section id="research">
 
-  <p>
-    This website collects my personal information,
-    research interests, and academic resources.
-    More details will be added gradually.
-  </p>
-</section>
+    <h2>Research</h2>
 
-<section id="notes">
-  <h2>Mathematics</h2>
+    <p>
+      My current interests include mathematics,
+      artificial intelligence, and research related to intelligent systems.
+    </p>
 
-  <p>
-    My mathematical notes and resources are maintained on my
-    Simplified Chinese mathematics homepage.
-  </p>
+    <p>
+      I am affiliated with
+      <a
+        href="https://deepdeltalab.github.io/zh/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        DeepDelta Lab
+      </a>.
+    </p>
 
-<a
-class="link"
-href="https://minamomo127430.github.io/SimplifiedChinese/"
-target="_blank"
-rel="noopener"
+    <a
+      class="link"
+      href="https://deepdeltalab.github.io/zh/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Visit DeepDelta Lab →
+    </a>
 
->
-
-```
-Mathematics Homepage →
-```
-
-  </a>
-</section>
-
-<section id="research">
-  <h2>Research</h2>
-
-  <p>
-    My current interests include mathematics,
-    artificial intelligence, and research related to intelligent systems.
-  </p>
-
-  <p>
-    I am affiliated with
-    <a href="https://deepdeltalab.github.io/zh/" target="_blank" rel="noopener">
-      DeepDelta Lab
-    </a>.
-  </p>
-
-<a
-class="link"
-href="https://deepdeltalab.github.io/zh/"
-target="_blank"
-rel="noopener"
-
->
-
-```
-Visit DeepDelta Lab →
-```
-
-  </a>
-</section>
+  </section>
 
 </main>
 
+
+<!-- Contact -->
 <footer id="contact">
 
-<a
-class="email-icon"
-href="mailto:minamomo@sjtu.edu.cn"
-aria-label="Email"
-title="Email"
+  <a
+    class="email-icon"
+    href="mailto:minamomo@sjtu.edu.cn"
+    aria-label="Email"
+    title="Email"
+  >
+    <svg
+      viewBox="0 0 80 60"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="1"
+        y="1"
+        width="78"
+        height="58"
+        rx="7"
+        fill="#000000"
+      />
 
->
-
-```
-<svg viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg">
-```
-
-```
-  <rect
-    x="3"
-    y="4"
-    width="58"
-    height="40"
-    rx="5"
-    fill="none"
-    stroke="#fff"
-    stroke-width="5"
-  />
-  <path
-    d="M7 9l25 20L57 9"
-    fill="none"
-    stroke="#fff"
-    stroke-width="5"
-    stroke-linejoin="round"
-  />
-</svg>
-```
-
+      <path
+        d="M4 6 L40 35 L76 6"
+        fill="none"
+        stroke="#ffffff"
+        stroke-width="6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
   </a>
 
   <p class="copy">
@@ -286,6 +326,7 @@ title="Email"
   </p>
 
 </footer>
+
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
